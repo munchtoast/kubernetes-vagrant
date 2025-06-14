@@ -58,3 +58,8 @@ echo "[TASK 7] restarting services"
 systemctl restart containerd
 systemctl restart kubelet
 systemctl restart docker
+
+echo "[TASK 8] install additional packages for longhorn"
+apt-get install -y open-iscsi nfs-common cryptsetup dmsetup 
+
+systemctl restart iscsid
